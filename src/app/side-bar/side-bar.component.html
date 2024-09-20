@@ -1,7 +1,22 @@
-<div class="sidebar">
-    <div class="sidebar-item" routerLink="dashboard">Project Overview</div>
-    <div class="sidebar-item" >Module Insights</div>
-    <div class="sidebar-item" routerLink="employees">Team Assignments</div>
-    <div class="sidebar-item" (click)="logout()">Sign Out</div>
-  </div>
-  
+<nav class="sidebar">
+  <ul class="sidebar-nav">
+    <li class="sidebar-item">
+      <a [routerLink]="['/dashboard']" routerLinkActive="active">
+        <img src="https://img.icons8.com/material-outlined/24/000000/dashboard-layout.png" alt="Dashboard Icon">
+        <span>Project Dashboard</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a [routerLink]="['/employees']" routerLinkActive="active">
+        <img src="https://img.icons8.com/material-outlined/24/000000/group-task.png" alt="Team Icon">
+        <span>Team Assignments</span>
+      </a>
+    </li>
+    <li class="sidebar-item">
+      <a (click)="logout()">
+        <img src="https://img.icons8.com/material-outlined/24/000000/exit.png" alt="Logout Icon">
+        <span>Sign Out</span>
+      </a>
+    </li>
+  </ul>
+</nav>
